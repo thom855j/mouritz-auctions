@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic,300italic,300|Slabo+27px");
 /* line 48, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.75rem;
@@ -107,6 +108,10 @@ blockquote {
     font-size: 1.333333333rem; }
  }
 
-/* line 4, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 9, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+* {
+  transition: all ease-in 0.2s; }
+
+/* line 14, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 body {
-  font-family: Arial, sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
