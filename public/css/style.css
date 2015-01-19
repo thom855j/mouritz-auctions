@@ -108,10 +108,11 @@ blockquote {
     font-size: 1.333333333rem; }
  }
 
-/* line 9, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 11, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 * {
   transition: all ease-in 0.2s; }
 
-/* line 14, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 16, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background: #ae2828; }

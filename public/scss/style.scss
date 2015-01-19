@@ -6,6 +6,8 @@
 $open-sans: 'Open Sans', sans-serif;
 $slabo: 'Slabo 27px', serif;
 
+$baseColor: #ae2828;
+
 * {
 	transition: all ease-in 0.2s;
 
@@ -13,5 +15,6 @@ $slabo: 'Slabo 27px', serif;
 
 body {
 	font-family: $open-sans;
+	background: $baseColor;
 
 }
