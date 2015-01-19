@@ -1,29 +1,108 @@
-/* Demo CSS */
+/* line 48, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.75rem;
+  line-height: 1.1; }
 
-html, body {
-    margin: 0;
+/* line 54, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+p {
+  margin: 0 0 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 150%; }
+  /* line 61, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  p.lead, blockquote p {
+    font-size: 1.133333333rem;
+    line-height: 1.33; }
+
+/* line 69, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+ul, ol {
+  padding-left: 1.5rem; }
+  /* line 72, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  ul li, ol li {
+    line-height: 150%; }
+  /* line 76, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  ul.unstyled, ol.unstyled {
     padding: 0;
-}
+    list-style: none; }
+  /* line 81, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  ul.inline, ol.inline {
+    margin: 0 1rem 0.75rem -1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+    /* line 87, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+    ul.inline > li, ol.inline > li {
+      display: block;
+      float: left;
+      margin-left: 1rem;
+      list-style: none; }
 
-body {
-    font-size: 15px;
-}
+/* line 96, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+dl {
+  margin: 0 0 0.75rem;
+  line-height: 150%; }
 
-table {
-    font-size: 13px;
-}
+/* line 101, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+dt {
+  font-weight: bold; }
 
-.container {
-    border: 3px solid #000;
-    padding: 20px;
-    margin: 10px;
-}
+/* line 105, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+dd {
+  margin: 0 0 0.5rem; }
 
-.where-are-we-box {
-    position: relative;
-    left: -20px;
-    top: -20px;
-    background-color: #bbb;
-    padding: 10px 15px;
-    display: inline-block;
-}
+/* line 110, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+blockquote {
+  position: relative;
+  margin: 1.5rem 1rem 1.5rem 3rem; }
+  /* line 118, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  blockquote:before {
+    content: "“";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    font-size: 5rem;
+    line-height: 1; }
+
+/* line 130, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+.text-left {
+  text-align: left; }
+
+/* line 131, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+.text-center {
+  text-align: center; }
+
+/* line 132, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+.text-right {
+  text-align: right; }
+
+@media only screen and (min-width: 641px) {
+  /* line 139, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h1 {
+    font-size: 3.160493827rem; }
+
+  /* line 140, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h2 {
+    font-size: 2.37037037rem; }
+
+  /* line 141, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h3 {
+    font-size: 1.777777778rem; }
+
+  /* line 142, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h4 {
+    font-size: 1.333333333rem; }
+
+  /* line 143, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h5 {
+    font-size: 1rem; }
+
+  /* line 144, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  h6 {
+    font-size: 1rem; }
+
+  /* line 146, C:/xampp/htdocs/projects/mouritz-com/public/scss/partials/_typography.scss */
+  p.lead, blockquote p {
+    font-size: 1.333333333rem; }
+ }
