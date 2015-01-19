@@ -14,31 +14,28 @@ class Account extends Controller {
                 $user->login();
             }
         }
-        
+
         // loadModel model
         $user = $this->loadModel('UserModel');
         $feedback[] = Session::flash('feedback');
         // feedback feedback
-        if (!$user->isLoggedIn()) {
-            Session::flash('feedback', '<p>You need to login to continue.</p>');
-            Redirect::to(URL . 'account/login');
-        } else {
+        if ($user->isLoggedIn()) {
             // loadModel views
             $this->view('account/index', (object) array(
                         'user' => $user,
                         'feedback' => $feedback
             ));
         }
+        Session::flash('feedback', '<p style="color: red;">You need to login to continue!</p>');
+        Redirect::to(URL . 'login');
     }
 
     public function register() {
         // loadModel model
         $user = $this->loadModel('UserModel');
 
-        if ($user->isLoggedIn()) {
-            Session::flash('feedback', '<p>You are already logged in!</p>');
-            Redirect::to(URL . 'account');
-        } else {
+        if (!$user->isLoggedIn()) {
+
             // feedback feedback
             $feedback = Session::flash('feedback');
             $input = Session::flash('input');
@@ -48,48 +45,57 @@ class Account extends Controller {
                         'input' => (object) $input
             ));
         }
+        Session::flash('feedback', '<p>You are already logged in!</p>');
+        Redirect::to(URL . 'account');
     }
-
 
     public function profile() {
         $user = $this->loadModel('UserModel');
-        if (!$user->isLoggedIn()) {
-            Redirect::to(URL . 'account/login');
-        } else {
+        if ($user->isLoggedIn()) {
+
             $feedback = Session::flash('feedback');
             $this->view('account/profile', (object) array(
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
             ));
         }
+        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+        Redirect::to(URL . 'login');
     }
 
     public function settings() {
         $user = $this->loadModel('UserModel');
-        if (!$user->isLoggedIn()) {
+        if ($user->isLoggedIn()) {
             Redirect::to(URL . 'account/login');
-        } else {
             $feedback = Session::flash('feedback');
             $this->view('account/settings', (object) array(
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
             ));
         }
+        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+        Redirect::to(URL . 'login');
     }
 
     public function change() {
         $user = $this->loadModel('UserModel');
-        if (!$user->isLoggedIn()) {
-            Redirect::to(URL . 'login');
-        } else {
+        if ($user->isLoggedIn()) {
+
             $feedback = Session::flash('feedback');
             $this->view('account/change', (object) array(
                         'feedback' => (object) $feedback,
                         'user' => (object) $user
             ));
         }
+        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+        Redirect::to(URL . 'login');
     }
 
-
+    public function logout() {
+        $model = $this->loadModel('UserModel');
+        $user = $model->logout();
+        Session::flash('feedback', '<p>You have been logged out!</p>');
+        Redirect::to(URL . 'login');
+    }
 
 }

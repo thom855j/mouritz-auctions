@@ -1,34 +1,37 @@
 <section class="container">
     <?php
+    $Username = USER_USERNAME;
+    $Firstname = USER_FIRSTNAME;
+    $Lastname = USER_LASTNAME;
+    $Email = USER_EMAIL;
+
     if (!empty($data->errors)) {
         foreach ($data->errors as $error) {
             echo $error;
         }
     }
     ?>
-    <form action="<?php echo URL ?>users/profile" method="POST">
+    <form action="<?php echo URL ?>update/profile" method="POST">
 
         <label for="Firstname">Firstname</label>
         <input type="text" 
-               name="<?php echo USER_FIRSTNAME ?>" 
+               name="firstname" 
                id="Firstname" 
-               value="<?php echo Output::escape($data->user->data()->Firstname); ?>" />
-        
+               value="<?php echo Input::escape($data->user->data()->$Firstname); ?>" />
+
         <label for="Lastname">Lastname</label>
         <input type="text" 
-               name="<?php echo USER_LASTNAME ?>" 
+               name="lastname" 
                id="Lastname" 
-               value="<?php echo Output::escape($data->user->data()->Lastname); ?>" />
-        
+               value="<?php echo Input::escape($data->user->data()->$Lastname); ?>" />
+
         <label for="Email">Email</label>
         <input type="email" 
-               name="<?php echo USER_EMAIL ?>" 
+               name="email" 
                id="Email" 
-               value="<?php echo Output::escape($data->user->data()->Email); ?>" />
+               value="<?php echo Input::escape($data->user->data()->$Email); ?>" />
 
-        <input type="hidden" 
-               name="<?php echo TOKEN_NAME ?>" 
-               value="<?php echo Token::generate(); ?>" />
+
         <input type="submit" value="Update" />
     </form>
 </section>

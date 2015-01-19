@@ -15,11 +15,16 @@ class Login extends Controller {
 
     public function index() {
         $user = $this->loadModel('UserModel');
-        $feedback[] = Session::flash('feedback');
-        // load views
-        $this->view('login/index', (object) array(
-                    'feedback' => (object) $feedback
-        ));
+        if ($user->isLoggedIn()) {
+            Session::flash('feedback', '<p style="color: green;">You are already logged in!</p>');
+            Redirect::to(URL . 'account');
+        } else {
+            $feedback[] = Session::flash('feedback');
+            // load views
+            $this->view('login/index', (object) array(
+                        'feedback' => (object) $feedback
+            ));
+        }
     }
 
     public function verify() {
@@ -38,20 +43,20 @@ class Login extends Controller {
                 $login = $user->login(Input::escape(Input::get('username')), Input::escape(Input::get('password')), $remember);
 
                 if ($login && $user->role('Admin')) {
-                    Session::flash('errors', '<p style="color: green;">You have logged in successfully!</p>');
+                    Session::flash('feedback', '<p style="color: green;">You have logged in successfully!</p>');
                     Redirect::to(URL . 'controlpanel');
                 } elseif ($login) {
-                    Session::flash('errors', '<p style="color: green;">You have logged in successfully!</p>');
+                    Session::flash('feedback', '<p style="color: green;">You have logged in successfully!</p>');
                     Redirect::to(URL . 'login');
                 } elseif (!$login) {
-                    Session::flash('errors', '<p style="color: red;">Sorry. Login failed.</p>');
+                    Session::flash('feedback', '<p style="color: red;">Sorry. Login failed.</p>');
                     Redirect::to(URL . 'login');
                 }
             } else {
                 foreach ($validation->errors() as $error) {
                     $errors[] = $error;
                 }
-                Session::flash('errors', $errors);
+                Session::flash('feedback', $errors);
                 Redirect::to(URL . 'login');
             }
         }

@@ -13,9 +13,8 @@ class Controlpanel extends Controller {
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
             ));
-        } else {
-            Redirect::to(URL . 'account');
         }
+        Redirect::to(URL . 'account');
     }
 
     public function edit($params, $ID) {

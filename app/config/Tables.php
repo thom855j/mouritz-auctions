@@ -8,19 +8,19 @@
 
 // User table
 define('USERS_TABLE', 'Users');
-define('USER_ID', 'ID');
-define('USER_NAME', 'Username');
-define('USER_PASSWORD', 'Password');
-define('USER_EMAIL', 'Email');
-define('USER_SALT', 'Salt');
-define('USER_FIRSTNAME', 'Firstname');
-define('USER_LASTNAME', 'Lastname');
-define('USER_ROLE', 'Role_ID');
+define('USER_ID', 'id');
+define('USER_USERNAME', 'username');
+define('USER_PASSWORD', 'password');
+define('USER_EMAIL', 'email');
+define('USER_NAME', 'name');
+define('USER_FIRSTNAME', 'firstname');
+define('USER_LASTNAME', 'lastname');
+define('USER_ROLE', 'role_id');
 
 // Roles table
 define('ROLES_TABLE', 'Roles');
-define('ROLE_ID', 'ID');
-define('ROLE_NAME', 'Role');
+define('ROLE_ID', 'id');
+define('ROLE_NAME', 'role');
 
 // Comments table
 define('COMMENTS_TABLE', 'Comments');
@@ -35,6 +35,6 @@ define('AUCTION_USER_ID', 'user_id');
 
 // Sessions table
 define('SESSIONS_TABLE', 'Sessions');
-define('SESSION_ID', 'ID');
-define('SESSION_HASH', 'Hash');
-define('SESSION_USER_ID', 'User_ID');
+define('SESSION_ID', 'id');
+define('SESSION_HASH', 'hash');
+define('SESSION_USER_ID', 'user_id');

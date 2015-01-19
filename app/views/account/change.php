@@ -6,27 +6,18 @@
         }
     }
     ?>
-    <form action="<?php echo URL ?>users/password" method="post">
+    <form action="<?php echo URL ?>update/password" method="post">
 
-        <label for="Password">Current password</label>
-        <input type="text" 
-               name="<?php echo USER_PASSWORD ?>" 
-               id="Password" 
-               value="<?php echo Output::escape($data->user->data()->Password); ?>" />
-
-        <label for="New">New password</label>
+        <label for="password">New password</label>
         <input type="password" 
-               name="<?php echo PASSWORD_NEW ?>" 
-               id="New" />
+               name="password" 
+               id="password" />
 
-        <label for="Check">New password check</label>
+        <label for="check">New password check</label>
         <input type="password" 
-               name="<?php echo PASSWORD_CHECK ?>" 
-               id="Check" />
+               name="check" 
+               id="check" />
 
-        <input type="hidden" 
-               name="<?php echo TOKEN_NAME ?>" 
-               value="<?php echo Token::generate(); ?>" />
-        <input type="submit" value="Change" />
+        <input type="submit" value="Update" />
     </form>
 </section>

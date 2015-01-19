@@ -14,6 +14,12 @@
     var url = "<?php echo URL; ?>";
 </script>
 
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<!-- our JavaScript -->
+<script src="<?php echo URL; ?>public/js/valid.js"></script>
+<script src="<?php echo URL; ?>public/js/i18.js"></script>
+<script src="<?php echo URL; ?>public/js/bootstrap.min.js"></script>
 <!-- our JavaScript -->
 <script src="<?php echo URL; ?>js/application.js"></script>
 </body>

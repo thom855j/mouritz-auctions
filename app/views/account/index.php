@@ -1,15 +1,15 @@
 <div class="container">
     
-    <p>Hello <a href="<?php echo URL; ?>account/profile"><?php echo Output::escape($data->user->data()->Username); ?></a>!</p>
+    <p>Hello <a href="<?php echo URL; ?>account/profile"><?php echo Input::escape($data->user->data()->username); ?></a>!</p>
         <?php
-    if (!empty($data->errors)) {
-        foreach ($data->errors as $error) {
-            echo $error;
+    if (!empty($data->feedback)) {
+        foreach ($data->feedback as $feedback) {
+            echo $feedback;
         }
     }
     ?>
 
-    <?php if ($user->role('Admin') || $user->role('SuperAdmin')) { ?>
+    <?php if ($user->role('Admin')) { ?>
         <p><a href = "<?php echo URL; ?>controlpanel">CONTROLPANEL</a></p>
         <?php
     }

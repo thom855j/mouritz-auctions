@@ -14,15 +14,24 @@
 class Delete {
 
     public function index() {
+        if (Input::exists()) {
+            
+        }
         Redirect::to(URL . 'error/404');
     }
 
     public function comment() {
-        
+        if (Input::exists()) {
+            
+        }
+        Redirect::to(URL . 'error/404');
     }
 
     public function user() {
-        
+        if (Input::exists()) {
+            
+        }
+        Redirect::to(URL . 'error/404');
     }
 
 }

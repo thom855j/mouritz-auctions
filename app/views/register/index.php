@@ -1,13 +1,13 @@
 
 <div class="container" style="width: 300px; text-align: center;">
 
-    <form style=""class="form-signin" role="form" method="post" action="<?php echo URL; ?>register/check" data-parsley-validate>
+    <form style=""class="form-signin" role="form" method="post" action="<?php echo URL; ?>register/verify" data-parsley-validate>
         <p style="color: red;">
 
             <?php
-            if (!empty($data->errors)) {
-                foreach ($data->errors as $error) {
-                    echo $error;
+            if (!empty($data->feedback)) {
+                foreach ($data->feedback as $feedback) {
+                    echo $feedback;
                 }
             }
             ?>

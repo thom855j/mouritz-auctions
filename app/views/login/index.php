@@ -1,9 +1,9 @@
 
-<div class="container" style="width: 300px; text-align: center;">
+<div class="container" >
     <?php
-    if (!empty($data->errors)) {
-        foreach ($data->errors as $error) {
-            echo $error;
+    if (!empty($data->feedback)) {
+        foreach ($data->feedback as $feedback) {
+            echo $feedback;
         }
     }
     ?>
@@ -11,7 +11,7 @@
         <h2>Login</h2>
     </div>
 
-    <form style=""class="form-signin" role="form" method="post" action="<?php echo URL; ?>login/check" data-parsley-validate>
+    <form class="form-signin" role="form" method="post" action="<?php echo URL; ?>login/verify" data-parsley-validate>
         <input type="text" name="username"  class="form-control" placeholder="Brugernavn" required="" autofocus="">
         <input type="password" name="password"  class="form-control" placeholder="Adgangskode" required="">
         <label class="checkbox">
