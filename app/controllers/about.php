@@ -3,15 +3,14 @@
 /**
  * Class About
  */
-class About extends Controller
-{
+class About extends Controller {
+
     /**
      * PAGE: index
      */
-    public function index()
-    {
-        // load views. 
-       $this->view('about/index');
+    public function index() {
+        // load views.
+        $this->view('about/index');
     }
 
 }

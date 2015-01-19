@@ -7,13 +7,25 @@ class UserModel {
             $_data,
             $_sessionName,
             $_cookieName,
-            $_isLoggedIn;
+            $_isLoggedIn,
+            $ID,
+            $Role_ID,
+            $Role,
+            $Password,
+            $Hash;
 
     public function __construct($user = null) {
         $this->_db = DB::getInstance();
 
         $this->_sessionName = SESSION_NAME;
         $this->_cookieName = COOKIE_NAME;
+        
+        //Tables
+        $this->ID = USER_ID;
+        $this->Role_ID = ROLE_ID;
+        $this->Role = ROLE_NAME;
+        $this->Hash = SESSION_HASH;
+        $this->Password = USER_PASSWORD;
 
         if (!$user) {
             if (Session::exists($this->_sessionName)) {
@@ -57,7 +69,7 @@ class UserModel {
     }
 
     //Get all users
-    public function getAllUsers() {
+    public function getUsers() {
         $this->_db->get(array('*'), USERS_TABLE);
         return $this->_db->results();
     }
@@ -97,7 +109,7 @@ class UserModel {
             $user = $this->find($username);
             if ($user) {
 
-                if (Password::check($password, $this->data()->Password)) {
+                if (Password::verify($password, $this->data()->Password)) {
                     // password is correct
 
                     Session::put($this->_sessionName, $this->data()->ID);
@@ -108,7 +120,7 @@ class UserModel {
 
                         if (!$hashCheck->count()) {
                             $this->_db->insert(SESSIONS_TABLE, array(
-                                SESSION_USER_ID => $this->data()->ID,
+                                SESSION_USER_ID => $this->data()->$ID,
                                 SESSION_HASH => $hash
                             ));
                         } else {

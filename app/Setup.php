@@ -12,7 +12,7 @@
 
 // Main setup settings
 
-define('DATABASE', 'MVC');
+define('DATABASE', 'thom855j');
 
 define('TEMPLATE', 'MVC');
 

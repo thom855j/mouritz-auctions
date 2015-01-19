@@ -1,6 +1,6 @@
 <?php
 
-class Validate {
+class ValidateModel {
 
     private
             $_passed = false,

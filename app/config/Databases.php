@@ -6,10 +6,10 @@
  */
 
 //CONNECTION
-if(DATABASE == 'MVC') {
+if(DATABASE == 'thom855j') {
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'thom855j_MVC');
+define('DB_NAME', 'thom855j_MouritzAuktioner');
 define('DB_USER', 'thom855j_sde');
 define('DB_PASS', 'sde101292');
 }

@@ -16,7 +16,7 @@ class Error extends Controller {
      */
     public function index() {
         // load views
-        $this->error(404);
+        $this->view('error/404');
     }
 
 }

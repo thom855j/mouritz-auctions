@@ -20,9 +20,18 @@ define('USER_ROLE', 'Role_ID');
 // Roles table
 define('ROLES_TABLE', 'Roles');
 define('ROLE_ID', 'ID');
+define('ROLE_NAME', 'Role');
 
-//Roles
-define('ADMIN_ROLE', 'Admin');
+// Comments table
+define('COMMENTS_TABLE', 'Comments');
+define('COMMENT_ID', 'id');
+define('COMMENT_USER_ID', 'user_id');
+define('COMMENT_AUCTION_ID', 'auction_id');
+
+// Auctions table
+define('AUCTIONS_TABLE', 'Auctions');
+define('AUCTION_ID', 'id');
+define('AUCTION_USER_ID', 'user_id');
 
 // Sessions table
 define('SESSIONS_TABLE', 'Sessions');

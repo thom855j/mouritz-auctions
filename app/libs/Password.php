@@ -11,16 +11,8 @@ class Password {
         return crypt($input, sprintf('$2y$%02d$', $rounds) . $salt);
     }
 
-    public static function check($input, $data) {
+    public static function verify($input, $data) {
         return crypt($input, $data) === $data;
-    }
-
-    public static function verify($input) {
-        if ($data != $input) {
-            return false;
-        } else {
-            return $input;
-        }
     }
 
 }

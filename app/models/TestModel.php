@@ -1,5 +1,5 @@
 <?php
 
-class Test {
+class TestModel {
     //put your code here
 }

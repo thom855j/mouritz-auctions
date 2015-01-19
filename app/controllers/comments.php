@@ -4,30 +4,24 @@ class Comments extends Controller {
 
     public function index() {
         // load model
-        $user = $this->loadModel('User');
-        if (!$user->isLoggedIn()) {
-            Session::flash('errors', '<p>You need to login to continue.</p>');
-            Redirect::to(URL . 'account/login');
-        } else {
-            // load views
-            $model = $this->loadModel('Comment');
-            $data = $model->getAllComments();
+        // load views
+        $model = $this->loadModel('CommentModel');
+        $comments = $model->getComments();
 
-            $this->view('controlpanel/comments', (object) array(
-                        'comments' => (object) $data
-            ));
-        }
+        $this->view('comments/index', (object) array(
+                    'comments' => (object) $comments
+        ));
     }
 
     public function read($ID) {
         $model = $this->loadModel('News');
         $news = $model->getNews($ID);
 
-        $errors[] = Session::flash('errors');
+        $feedback[] = Session::flash('feedback');
 
         $this->view('blog/read', (object) array(
                     'news' => (object) $news,
-                    'errors' => (object) $errors
+                    'feedback' => (object) $feedback
         ));
     }
 
@@ -44,7 +38,7 @@ class Comments extends Controller {
         $model = $this->loadModel('Comment');
         $news = $model->delete($ID);
 
-        Session::flash('errors', '<p>Comment deleted successfully!</p>');
+        Session::flash('feedback', '<p>Comment deleted successfully!</p>');
         Redirect::to(URL . 'controlpanel/comments');
     }
 
@@ -59,7 +53,7 @@ class Comments extends Controller {
                     'News_ID' => Input::escape(Input::get('News'))
                 ));
 
-                Session::flash('errors', "<p>Comment added successfully!</p>");
+                Session::flash('feedback', "<p>Comment added successfully!</p>");
                 Redirect::to(URL . 'blog/read/' . Input::escape(Input::get('News')));
             } catch (Exception $e) {
                 die($e->getMessage());
