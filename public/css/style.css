@@ -106,3 +106,7 @@ blockquote {
   p.lead, blockquote p {
     font-size: 1.333333333rem; }
  }
+
+/* line 4, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+body {
+  font-family: Arial, sans-serif; }
