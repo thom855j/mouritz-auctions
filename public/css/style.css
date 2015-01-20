@@ -132,6 +132,8 @@ MODULES
 
 .login-wrap {
   text-align: center; }
+  .login-wrap ul {
+    list-style-type: none; }
 
 input[type="text"], input[type="password"], .btn-log {
   border: none;
