@@ -9,7 +9,7 @@
         }
     }
     ?>
-    <div class="unit big-heading">
+    <div class="heading">
         <h2>Login</h2>
     </div>
 
