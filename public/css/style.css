@@ -141,12 +141,13 @@ MODULES
   /* line 40, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_header.scss */
   .nav .navItem a {
     color: #000;
+    text-decoration: none;
     border-bottom: 1px solid transparent; }
-    /* line 44, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_header.scss */
+    /* line 45, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_header.scss */
     .nav .navItem a:hover {
       border-bottom: 1px solid #ae2828; }
 
-/* line 54, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_header.scss */
+/* line 55, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_header.scss */
 .nav .navItem:first-child {
   margin-left: 0; }
 
@@ -154,6 +155,7 @@ MODULES
 .login-wrap {
   text-align: center; }
 
+/* line 9, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 input[type="text"], [type="password"] {
   border: none;
   border-radius: 5px;
@@ -172,9 +174,28 @@ body {
 
 /* line 28, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 a {
-  text-decoration: none; }
+  color: #000; }
 
 /* line 33, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
-.page-wrapper {
+.page-wrapper, .container {
   max-width: 1100px;
   margin: 0 auto; }
+
+/* line 39, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+th {
+  font-family: 'Slabo 27px', serif;
+  font-weight: 600; }
+
+/* line 47, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+pre {
+  width: 500px;
+  margin: 50px auto;
+  overflow: auto;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #ebebeb;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px; }
