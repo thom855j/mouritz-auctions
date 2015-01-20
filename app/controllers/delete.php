@@ -23,17 +23,15 @@ class Delete {
             Session::flash('errors', '<p style="color: green;">Comment removed successfully!</p>');
             Redirect::to(URL . 'controlpanel/comments');
         } else {
-            require_once TEMPLATES . 'backend/header.php';
             ?>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
+            <div> 
                 <p>Are you sure you want to delete comment <?php echo $ID; ?>?</p>
                 <form method="post" action=""> 
-                    <input class="btn btn-danger" type="submit" name="submit" value="Yes"> 
+                    <input type="submit" name="submit" value="Yes"> 
                 </form> 
-                <a class="btn btn-success" href="<?php echo URL; ?>controlpanel/comments">Nej</a> 
+                <a href="<?php echo URL; ?>controlpanel/comments">Nej</a> 
             </div>
             <?php
-            require_once TEMPLATES . 'backend/footer.php';
         }
         Redirect::to(URL . 'error/404');
     }
@@ -44,22 +42,63 @@ class Delete {
 
             $model->delete($ID);
 
-            Session::flash('errors', '<p style="color: green;">Comment removed successfully!</p>');
+            Session::flash('errors', '<p style="color: green;">User removed successfully!</p>');
             Redirect::to(URL . 'controlpanel/users');
         } else {
-            require_once TEMPLATES . 'backend/header.php';
             ?>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
+            <div> 
                 <p>Are you sure you want to delete this user <?php echo $ID; ?>?</p>
                 <form method="post" action=""> 
-                    <input class="btn btn-danger" type="submit" name="submit" value="Yes"> 
+                    <input type="submit" name="submit" value="Yes"> 
                 </form> 
-                <a class="btn btn-success" href="<?php echo URL; ?>controlpanel/users">Nej</a> 
+                <a href="<?php echo URL; ?>controlpanel/users">Nej</a> 
             </div>
             <?php
-            require_once TEMPLATES . 'backend/footer.php';            
         }
         Redirect::to(URL . 'error/404');
     }
 
+    public function image($ID) {
+        if (Input::exists()) {
+            $model = $this->loadModel('ImageModel');
+
+            $model->delete($ID);
+
+            Session::flash('errors', '<p style="color: green;">Image removed successfully!</p>');
+            Redirect::to(URL . 'account/auctions');
+        } else {
+            ?>
+            <div> 
+                <p>Are you sure you want to delete this user <?php echo $ID; ?>?</p>
+                <form method="post" action=""> 
+                    <input type="submit" name="submit" value="Yes"> 
+                </form> 
+                <a href="<?php echo URL; ?>account/auctions">Nej</a> 
+            </div>
+            <?php
+        }
+        Redirect::to(URL . 'error/404');
+    }
+
+    public function auction($ID){
+        if(Input::exists()){
+            $model = $this->loadModel('AuctionModel');
+            
+            $model->delete($ID);
+            
+            Session::flash('errors', '<p style="color: green;">Auction removed successfully!</p>');
+            Redirect::to(URL . 'account/user');
+        } else {
+            ?>
+            <div> 
+                <p>Are you sure you want to delete this user <?php echo $ID; ?>?</p>
+                <form method="post" action=""> 
+                    <input type="submit" name="submit" value="Yes"> 
+                </form> 
+                <a href="<?php echo URL; ?>account/auctions">Nej</a> 
+            </div>
+            <?php
+        }
+        Redirect::to(URL . 'error/404');
+    }
 }
