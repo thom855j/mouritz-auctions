@@ -23,7 +23,7 @@ class Create {
     public function auction() {
         if (Input::exists()) {
 
-            $allowedExts = array("gif", "jpeg", "jpg", "png");
+            $allowedExts = ALLOWED_EXTENSIONS;
             $temp = explode(".", Input::escape(Input::get('file', 'name')));
             $extension = end($temp);
 
@@ -33,7 +33,7 @@ class Create {
                     (Input::get('file', 'type') == "image/pjpeg") ||
                     (Input::get('file', 'type') == "image/x-png") ||
                     (Input::get('file', 'type') == "image/png")) &&
-                    (Input::get('file', 'size') < 2000000) && in_array($extension, $allowedExts)) {
+                    (Input::get('file', 'size') < MAX_UPLOAD_SIZE) && in_array($extension, $allowedExts)) {
                 if (Input::get('file', 'error') > 0) {
                     Session::flash('feedback', '<p style="color: red;">Return Code: ' . Input::get('file', 'error') . '</p>');
                     Redirect::to(URL . 'account/auction');
@@ -41,7 +41,7 @@ class Create {
 
                     $ext = str_replace('image/', '.', Input::get('file', 'type'));
                     $filename = str_replace($ext, '', Input::get('file', 'name'));
-                    $file = md5(mt_srand() . microtime()) . $ext;
+                    $file = RANDOM_NAME . $ext;
 
                     if (file_exists(UPLOADS_FOLDER . $file)) {
                         $uploaderror = $file . " already exists. ";

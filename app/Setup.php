@@ -14,15 +14,9 @@
 
 define('DATABASE', 'thom855j');
 
-define('TEMPLATE', 'MVC');
-
 define('DEBUG', true);
 
 define('CACHE', false);
-
-define('PRIVATE_NETWORK', true);
-
-define('EMAIL_ACTIVATION', false);
 
 define('FEEDBACK_MESSAGES', true);
 
