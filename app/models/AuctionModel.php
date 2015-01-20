@@ -16,7 +16,7 @@ class AuctionModel {
 
     //Get all users
     public function getAuctions() {
-        $sql = "SELECT id, title, start_date, end_date, description, start_price, buy_price, category, user, image
+        $sql = "SELECT id, title, start_date, end_date, description, start_price, buy_price, category, user, image, status
       FROM (SELECT 
       Auctions.id AS id, 
       Auctions.title AS title, 
@@ -25,11 +25,13 @@ class AuctionModel {
       Auctions.description AS description, 
       Auctions.start_price AS start_price, 
       Auctions.buy_price AS buy_price,
+      Auctions.status AS status,
       Auctions.category_id AS category_id, 
       Categories.name AS category,
       Users.username AS user,
       Auction_Images.url AS image
       FROM Auctions, Categories, Auction_Images, Users
+      WHERE  Auctions.status = 0
 	) AS result GROUP by id";
         $this->_db->query($sql);
         return $this->_db->results();

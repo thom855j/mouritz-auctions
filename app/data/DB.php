@@ -26,6 +26,11 @@ class DB {
         return self::$_instance;
     }
 
+    public function lastInsertID() {
+        // Return last inserted ID from DB
+        return $this->_pdo->lastInsertId();
+    }
+
     public function query($sql, $params = array(), $searchParams = array(), $searchTermsCount = null) {
         $this->_error = false;
         $prepare = $this->_query = $this->_pdo->prepare($sql);
