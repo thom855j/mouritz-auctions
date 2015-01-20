@@ -33,7 +33,6 @@
                                     <li class="navItem"><a href="<?php echo URL; ?>home">Home</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>about">About</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>auctions">Auctions</a></li>
-                                    <li class="navItem"><a href="<?php echo URL; ?>account">Account</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>login">Login</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>register">Register</a></li>
                                 <?php } ?>
