@@ -117,18 +117,23 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 /* line 21, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+/* line 27, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav-wrapper {
   margin-top: 80px; }
 
-/* line 29, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 35, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav {
   list-style: none; }
 
-/* line 34, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 40, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav .navItem {
   float: left;
-  margin-left: 2%; }
+  margin-left: 2em; }
 
-/* line 43, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 50, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav .navItem:first-child {
   margin-left: 0; }
