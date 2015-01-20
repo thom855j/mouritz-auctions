@@ -13,42 +13,29 @@ class Account extends Controller {
                 $user = $this->load('UserModel', $hashCheck->first()->$ID);
                 $user->login();
             }
-        }
+        } else {
 
-        // loadModel model
-        $user = $this->loadModel('UserModel');
-        $feedback[] = Session::flash('feedback');
-        // feedback feedback
-        if ($user->isLoggedIn()) {
-            // loadModel views
-            $this->view('account/index', (object) array(
-                        'user' => $user,
-                        'feedback' => $feedback
-            ));
-        }
-        Session::flash('feedback', '<p style="color: red;">You need to login to continue!</p>');
-        Redirect::to(URL . 'login');
-    }
-
-    public function register() {
-        // loadModel model
-        $user = $this->loadModel('UserModel');
-
-        if (!$user->isLoggedIn()) {
-
+            // loadModel model
+            $user = $this->loadModel('UserModel');
+            $feedback[] = Session::flash('feedback');
             // feedback feedback
-            $feedback = Session::flash('feedback');
-            $input = Session::flash('input');
-            // loadModel view
-            $this->view('register', (object) array(
-                        'feedback' => (object) $feedback,
-                        'input' => (object) $input
-            ));
+            if ($user->isLoggedIn()) {
+                // loadModel views
+                $this->view('account/index', (object) array(
+                            'user' => $user,
+                            'feedback' => $feedback
+                ));
+            } else {
+                Session::flash('feedback', '<p style="color: red;">You need to login to continue!</p>');
+                Redirect::to(URL . 'login');
+            }
         }
-        Session::flash('feedback', '<p>You are already logged in!</p>');
-        Redirect::to(URL . 'account');
     }
 
+    public function create($params) {
+         $this->view('account/create/' . $params);
+    }
+    
     public function profile() {
         $user = $this->loadModel('UserModel');
         if ($user->isLoggedIn()) {

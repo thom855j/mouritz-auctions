@@ -47,7 +47,7 @@ class Login extends Controller {
                     Redirect::to(URL . 'controlpanel');
                 } elseif ($login) {
                     Session::flash('feedback', '<p style="color: green;">You have logged in successfully!</p>');
-                    Redirect::to(URL . 'login');
+                    Redirect::to(URL . 'account');
                 } elseif (!$login) {
                     Session::flash('feedback', '<p style="color: red;">Sorry. Login failed.</p>');
                     Redirect::to(URL . 'login');

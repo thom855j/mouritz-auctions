@@ -27,14 +27,8 @@ class Controlpanel extends Controller {
         ));
     }
 
-    public function create($params, $ID) {
-        $class = ucfirst($params) . 'Model';
-        $method = 'get' . $class;
-        $model = $this->loadModel($class);
-        $data = $model->$method($ID);
-        $this->view('controlpanel/create/' . $params, (object) array(
-                    'data' => (object) $data
-        ));
+    public function create($params) {
+         $this->view('controlpanel/create/' . $params);
     }
 
     public function page($params, $ID) {

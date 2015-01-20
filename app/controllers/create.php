@@ -23,7 +23,7 @@ class Create {
     public function auction() {
         if (Input::exists()) {
 
-            $allowedExts = ALLOWED_EXTENSIONS;
+            $allowedExts = unserialize(ALLOWED_EXTENSIONS);
             $temp = explode(".", Input::escape(Input::get('file', 'name')));
             $extension = end($temp);
 
@@ -40,7 +40,6 @@ class Create {
                 } else {
 
                     $ext = str_replace('image/', '.', Input::get('file', 'type'));
-                    $filename = str_replace($ext, '', Input::get('file', 'name'));
                     $file = RANDOM_NAME . $ext;
 
                     if (file_exists(UPLOADS_FOLDER . $file)) {
@@ -60,19 +59,19 @@ class Create {
 
             $model = $this->loadModel('AuctionModel');
             $model->create(array(
-                'car_image' => $filename,
+                'car_image' => $file,
                 'title' => Input::escape(Input::get('name')),
                 'start_date' => date('Y-m-d H:i:s'),
                 'end_date' => $end_date,
                 'description' => Input::escape(Input::get('description')),
-                'start_price' => Input::escape(Input::get('start_price')),
-                'buy_price' => Input::escape(Input::get('buy_price')),
+                'start_price' => Input::escape(Input::get('start')),
+                'buy_price' => Input::escape(Input::get('buy')),
                 'category_id' => Input::escape(Input::get('cateogry')),
                 'user_id' => Input::escape(Input::get('user'))
             ));
 
             Session::flash('feedback', '<p style="color: green;">Auction created successfully!</p>');
-            Redirect::to(URL . 'controlpanel/ads');
+            Redirect::to(ACCOUNT . 'my-auctions');
         }
         Redirect::to(URL . 'error/404');
     }

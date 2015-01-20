@@ -33,6 +33,10 @@ define('AUCTIONS_TABLE', 'Auctions');
 define('AUCTION_ID', 'id');
 define('AUCTION_USER_ID', 'user_id');
 
+// Images table
+define('IMAGES_TABLE', 'Auction_Images');
+define('IMAGE_ID', 'auction_id');
+
 // Sessions table
 define('SESSIONS_TABLE', 'Sessions');
 define('SESSION_ID', 'id');

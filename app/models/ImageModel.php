@@ -12,5 +12,20 @@
  * @author ThomasElvin
  */
 class ImageModel {
-    //put your code here
+
+    //Get all users
+    public function getImages() {
+        $this->_db->get(array('*'), IMAGES_TABLE, null);
+        return $this->_db->results();
+    }
+
+    public function getImage($ID) {
+        $this->_db->get(array('*'), IMAGES_TABLE, array(IMAGE_ID, '=', $ID));
+        return $this->_db->results();
+    }
+
+    public function delete($ID) {
+        return $this->_db->delete(IMAGES_TABLE, array(IMAGE_ID, '=', $ID));
+    }
+
 }

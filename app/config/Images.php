@@ -6,5 +6,5 @@
  * and open the template in the editor.
  */
 
-define("ALLOWED_EXTENSIONS", array("gif", "jpeg", "jpg", "png"));
+define("ALLOWED_EXTENSIONS", serialize(array("gif", "jpeg", "jpg", "png")));
 define("MAX_UPLOAD_SIZE", 2000000);
