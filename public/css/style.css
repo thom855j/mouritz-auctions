@@ -117,23 +117,40 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 /* line 21, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+a {
+  text-decoration: none; }
+
+/* line 26, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .page-wrapper {
   max-width: 1100px;
   margin: 0 auto; }
 
-/* line 27, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 32, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav-wrapper {
   margin-top: 80px; }
 
-/* line 35, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 40, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.mainNav {
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/* line 49, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav {
   list-style: none; }
 
-/* line 40, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 54, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav .navItem {
   float: left;
-  margin-left: 2em; }
+  margin-left: 2em;
+  border-bottom: 1px solid transparent; }
+  /* line 62, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+  .nav .navItem:hover {
+    border-bottom: 1px solid #ae2828; }
+  /* line 67, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+  .nav .navItem a {
+    color: #000;
+    padding-bottom: 2px; }
 
-/* line 50, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 79, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .nav .navItem:first-child {
   margin-left: 0; }
