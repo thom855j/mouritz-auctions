@@ -18,7 +18,7 @@
 <div class="grid grid-pad">
     <div class="col-3-12">
         <div class="content">
-            <h2 class="heading">Settings</h2>
+            <h3 class="heading">Settings</h3>
             <ul class="noLi">
                 <li><a href="<?php echo URL; ?>account/settings">Settings</a></li>
                 <li><a href="<?php echo URL; ?>account/change" >Change Password</a></li>
@@ -28,7 +28,7 @@
 
     <div class="col-9-12">
         <div class="content">
-            <h3 class="heading">Username: <?php echo Input::escape($data->user->data()->$Username); ?></h3 class="heading">
+            <h2 class="heading">Username: <?php echo Input::escape($data->user->data()->$Username); ?></h2>
     <p>Full name: <?php echo Input::escape($data->user->data()->$Firstname); ?>  <?php echo Input::escape($data->user->data()->$Lastname); ?></p>
     <p>Email: <?php echo Input::escape($data->user->data()->$Email); ?> </p>
         </div>

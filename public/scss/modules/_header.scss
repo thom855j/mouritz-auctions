@@ -21,7 +21,7 @@ $navScale: scale(1.2);
 .nav .navItem {
 	float: left;
 	margin: {
-		left: 2em;
+		left: 2em !important;
 
 	}
 	border-bottom: 1px solid transparent;

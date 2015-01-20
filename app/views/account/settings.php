@@ -1,4 +1,4 @@
-<section class="container">
+<div class="container">
     <?php
     $Username = USER_USERNAME;
     $Firstname = USER_FIRSTNAME;
@@ -11,7 +11,21 @@
         }
     }
     ?>
-    <form action="<?php echo URL ?>update/profile" method="POST">
+
+    <div class="grid grid-pad">
+    <div class="col-3-12">
+        <div class="content">
+            <h4 class="heading">Settings</h4>
+            <ul class="noLi">
+                <li><a href="<?php echo URL; ?>account/settings">Settings</a></li>
+                <li><a href="<?php echo URL; ?>account/change" >Change Password</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-9-12">
+        <div class="content">
+                <form action="<?php echo URL ?>update/profile" method="POST">
 
         <label for="Firstname">Firstname</label>
         <input type="text" 
@@ -34,4 +48,8 @@
 
         <input type="submit" value="Update" />
     </form>
-</section>
+        </div>
+    </div>
+</div>
+
+</div>

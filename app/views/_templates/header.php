@@ -44,7 +44,9 @@
                                     <li class="navItem"><a href="<?php echo URL; ?>home">Home</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>about">About</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>auctions">Auctions</a></li>
+                                    <?php if ($user->role("Admin")) {?>
                                     <li class="navItem"><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
+                                       <?php } ?>
                                     <li class="navItem"><a href="<?php echo URL; ?>account/profile">Account</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>account/logout">Log out</a></li>
                                 <?php } ?>
