@@ -57,9 +57,3 @@
             </div>
         </div>
 
-        <div class="page-wrapper">
-
-
-
-
-        </div>
