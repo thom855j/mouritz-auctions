@@ -115,4 +115,5 @@ blockquote {
 /* line 16, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #ae2828; }
+  color: #ae2828;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }

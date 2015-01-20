@@ -15,6 +15,7 @@ $baseColor: #ae2828;
 
 body {
 	font-family: $open-sans;
-	background: $baseColor;
+	color: $baseColor;
+	text-shadow: 1px 1px 1px rgba(000, 000, 000, .2);
 
 }
