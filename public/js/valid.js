@@ -140,7 +140,7 @@
     // Could also be (and given directly from DOM) a valid selector like `'#div'`
     errorsContainer: function (ParsleyField) {},
     // ul elem that would receive errors' list
-    errorsWrapper: '<div class="parsley-errors"></div>',
+    errorsWrapper: '<br><div class="parsley-errors"></div><br>',
     // li elem that would receive error message
     errorTemplate: '<p class="parsley-errors-p"></p>'
   };

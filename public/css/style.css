@@ -154,24 +154,25 @@ MODULES
 /* line 3, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 .login-wrap {
   text-align: center; }
+  /* line 5, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
   .login-wrap ul {
     list-style-type: none; }
 
-/* line 9, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
+/* line 11, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 input[type="text"], input[type="password"], .btn-log {
   border: none;
   border-radius: 5px;
   width: 200px;
   padding: 20px; }
 
-/* line 20, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
+/* line 22, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 input[type="text"], input[type="password"] {
   padding-top: 12px;
   padding-bottom: 12px;
   background: #f0eae8;
   outline: none; }
 
-/* line 30, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
+/* line 32, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 .btn-log {
   padding-top: 6px;
   padding-bottom: 6px;
