@@ -26,7 +26,7 @@
                 echo "<td>$auction->description</td>";
                 echo "<td>$auction->start_price</td>";
                 echo "<td>$auction->buy_price</td>";
-                echo "<td>$auction->category</td>";
+                echo "<td>$auction->category_name</td>";
                 echo "<td>$auction->user</td>";
                 echo "<td>$auction->image</td>";
                 echo "</tr>";

@@ -20,13 +20,13 @@
             foreach ($data->auctions as $auction) {
                 echo "<tr>";
                 echo "<td>" . $nr++ . "</td>";
-                echo "<td>$auction->title</td>";
+                echo "<td><a href='" . URL . "details/auction/" . $auction->id . "'</a>$auction->title</td>";
                 echo "<td>$auction->start_date</td>";
                 echo "<td>$auction->end_date</td>";
                 echo "<td>$auction->description</td>";
                 echo "<td>$auction->start_price</td>";
                 echo "<td>$auction->buy_price</td>";
-                echo "<td>$auction->category</td>";
+                echo "<td>$auction->category_name</td>";
                 echo "<td>$auction->user</td>";
                 echo "<td>$auction->image</td>";
                 echo "</tr>";

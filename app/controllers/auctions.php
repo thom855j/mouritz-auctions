@@ -15,8 +15,9 @@ class Auctions extends Controller {
 
     public function index() {
         // load model
-        $model = $this->loadModel('AuctionModel');
-        $auctions = $model->getAuctions();
+        $auction_model = $this->loadModel('AuctionModel');
+        $auctions = $auction_model->getAuctions();
+        
         // load views.
         $this->view('auctions/index', (object) array(
                     'auctions' => (object) $auctions

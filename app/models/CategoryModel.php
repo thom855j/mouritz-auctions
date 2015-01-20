@@ -18,9 +18,14 @@ class CategoryModel {
     public function __construct() {
         $this->_db = DB::getInstance();
     }
+    
+      public function getCategories() {
+        $this->_db->get(array('*'), CATEGORIES_TABLE, null);
+        return $this->_db->results();
+    }
 
     public function create($fields = array()) {
-        return $this->_db->insert(CATEGORY_TABLE, $fields);
+        return $this->_db->insert(CATEGORIES_TABLE, $fields);
     }
 
 }

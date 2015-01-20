@@ -37,8 +37,13 @@ define('AUCTION_USER_ID', 'user_id');
 define('IMAGES_TABLE', 'Auction_Images');
 define('IMAGE_ID', 'auction_id');
 
+// Categories table
+define('CATEGORIES_TABLE', 'Categories');
+define('CATEGORIES_ID', 'id');
+
 // Sessions table
 define('SESSIONS_TABLE', 'Sessions');
 define('SESSION_ID', 'id');
 define('SESSION_HASH', 'hash');
 define('SESSION_USER_ID', 'user_id');
+

@@ -10,12 +10,22 @@ class CommentModel {
 
     //Get all users
     public function getComments() {
-        $this->_db->get(array('*'), COMMENTS_TABLE, null);
+        $this->_db->get(array('*'), VIEWS_COMMENTS, null);
         return $this->_db->results();
     }
 
     public function getComment($ID) {
-        $this->_db->get(array('*'), COMMENTS_TABLE, array(COMMENT_ID, '=', $ID));
+        $this->_db->get(array('*'), VIEWS_COMMENTS, array(COMMENT_ID, '=', $ID));
+        return $this->_db->results();
+    }
+
+    public function getAmountToAuction($ID) {
+        $this->_db->get(array('count(id) AS amount_of_comments'), VIEWS_COMMENTS, array(COMMENT_AUCTION_ID, '=', $ID));
+        return $this->_db->results();
+    }
+
+    public function getCommentsToAuction($ID) {
+        $this->_db->get(array('*'), VIEWS_COMMENTS, array(COMMENT_AUCTION_ID, '=', $ID));
         return $this->_db->results();
     }
 
