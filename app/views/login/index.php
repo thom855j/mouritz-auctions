@@ -7,6 +7,7 @@
         }
     }
     ?>
+    <div class="login-wrap">
     <div class="unit big-heading">
         <h2>Login</h2>
     </div>
@@ -21,4 +22,5 @@
         <a href="<?php echo URL; ?>register">Registrer</a><br>
         <a href="<?php echo URL; ?>home">Tilbage</a><br>
     </form>
+    <div> <!-- /login-wrap -->
 </div> <!-- /container -->
