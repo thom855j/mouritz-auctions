@@ -1,16 +1,14 @@
-<div class="container">
-    <?php
-    $Username = USER_USERNAME;
-    if (!empty($data->errors)) {
-        foreach ($data->errors as $error) {
-            echo $error;
-        }
-    }
-    ?>
-    <p>Hello admin <a href="<?php echo URL; ?>account/profile"><?php echo Input::escape($data->user->data()->$Username); ?></a>!</p>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
+    <h1 class="page-header">Controlpanel</h1> 
 
-    <ul>
-        <li><a href = "<?php echo URL; ?>controlpanel/users">Users</a></li>
-        <li><a href = "<?php echo URL; ?>controlpanel/comments">Comments</a></li>
-    </ul>
+    <h3>Velkommen</h3> 
+        <?php 
+        $Username = USER_USERNAME;
+    if (!empty($data->errors)) { 
+        foreach ($data->errors as $error) { 
+            echo $error; 
+        } 
+    } 
+    ?> 
+    <p>You are logged in as: <?php echo Input::escape($data->user->data()->$Username); ?></p> 
 </div>

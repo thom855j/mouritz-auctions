@@ -8,5 +8,10 @@
     }
     ?>
     <p>Welcome <a href="<?php echo URL; ?>account/profile"><?php echo Input::escape($data->user->data()->$Username); ?></a>!</p>
-
+    <p><a href = "<?php echo URL; ?>account/profile">profile</a></p>
+    <?php if ($user->role('Admin')) { ?>
+        <p><a href = "<?php echo URL; ?>controlpanel">Controlpanel</a></p>
+        <?php
+    }
+    ?>
 </div>

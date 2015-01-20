@@ -12,9 +12,11 @@ class Controlpanel extends Controller {
             $this->view('controlpanel/index', (object) array(
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
-            ));
+                    ), 'controlpanel');
+        } else {
+            Session::flash('feedback', '<p style="color: red;">Access denied!</p>');
+            Redirect::to(URL . 'login');
         }
-        Redirect::to(URL . 'account');
     }
 
     public function edit($params, $ID) {
@@ -28,7 +30,7 @@ class Controlpanel extends Controller {
     }
 
     public function create($params) {
-         $this->view('controlpanel/create/' . $params);
+        $this->view('controlpanel/create/' . $params);
     }
 
     public function page($params, $ID) {

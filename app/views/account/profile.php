@@ -13,13 +13,10 @@
     }
     ?>
 
-
-
-
     <div class="grid grid-pad">
         <div class="col-3-12">
             <div class="content">
-                <h3 class="heading">Settings</h3>
+                <h3 class="heading">Options</h3>
                 <ul class="noLi">
                     <?php if ($user->role("Admin")) { ?>
                         <li><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
