@@ -44,10 +44,8 @@
                                     <li class="navItem"><a href="<?php echo URL; ?>home">Home</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>about">About</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>auctions">Auctions</a></li>
-                                    <li class="navItem"><a href="<?php echo URL; ?>account">Account</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>account/profile">Profile</a></li>
-                                    <li class="navItem"><a href="<?php echo URL; ?>account/settings">Settings</a></li>
                                     <li class="navItem"><a href="<?php echo URL; ?>account/logout">Log out</a></li>
                                 <?php } ?>
                             </ul>
