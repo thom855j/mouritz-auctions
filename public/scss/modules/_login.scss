@@ -6,15 +6,33 @@
 
 }
 
-input[type="text"], [type="password"] {
+input[type="text"], input[type="password"], .btn-log {
 
-	border:none;
-
+	border: none;
 	border-radius: 5px;
 
-	padding: 5px;
+	width: 200px;
+
+	padding: 20px;
+
+}
+
+input[type="text"], input[type="password"] {
+
+	padding-top: 12px;
+	padding-bottom: 12px;
 
 	background: #f0eae8;
 	outline: none;
+
+}
+
+.btn-log {
+
+	padding-top: 6px;
+	padding-bottom: 6px;
+
+	background: $baseColor;
+	color: white;
 
 }

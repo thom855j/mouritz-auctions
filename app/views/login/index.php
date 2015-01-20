@@ -19,7 +19,7 @@
         <label class="checkbox">
             <input type="checkbox" name='remember' id="remember"> Remember login
         </label>
-        <input class=" btn-lg btn-primary btn-block" type="submit" name="submit" value="Login"><br>
+        <input class="btn-log" type="submit" name="submit" value="Login"><br>
         <a href="<?php echo URL; ?>register">Registrer</a><br>
         <a href="<?php echo URL; ?>home">Tilbage</a><br>
     </form>
