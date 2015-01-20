@@ -1,5 +1,5 @@
 
-<div class="container" >
+<div class="page-wrapper" >
     <?php
     if (!empty($data->feedback)) {
         foreach ($data->feedback as $feedback) {

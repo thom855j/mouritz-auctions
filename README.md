@@ -98,6 +98,3 @@ For at kunne byde på auktionerne skal man være logget ind som en bruger. Opret
 * Tlf
 * Brugernavn
 * Kodeord
-
-
-
