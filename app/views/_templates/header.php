@@ -19,6 +19,13 @@
         <!-- header -->
 
 
+<div class="page-wrapper center">
+    <div class="logo-wrapper">
+        <img src="<?php echo URL; ?>/img/logo.png" alt="Logo">
+    </div>
+
+</div>
+
 
         <div class="nav-wrapper">
             <div class="grid grid-pad">
