@@ -33,9 +33,9 @@ class Account extends Controller {
     }
 
     public function create($params) {
-         $this->view('account/create/' . $params);
+        $this->view('account/create/' . $params);
     }
-    
+
     public function profile() {
         $user = $this->loadModel('UserModel');
         if ($user->isLoggedIn()) {
@@ -45,9 +45,10 @@ class Account extends Controller {
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
             ));
+        } else {
+            Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+            Redirect::to(URL . 'login');
         }
-        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
-        Redirect::to(URL . 'login');
     }
 
     public function settings() {
@@ -59,9 +60,10 @@ class Account extends Controller {
                         'user' => (object) $user,
                         'feedback' => (object) $feedback
             ));
+        } else {
+            Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+            Redirect::to(URL . 'login');
         }
-        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
-        Redirect::to(URL . 'login');
     }
 
     public function change() {
@@ -73,9 +75,10 @@ class Account extends Controller {
                         'feedback' => (object) $feedback,
                         'user' => (object) $user
             ));
+        } else {
+            Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
+            Redirect::to(URL . 'login');
         }
-        Session::flash('feedback', '<p style="color: red;">You need to login to continue.</p>');
-        Redirect::to(URL . 'login');
     }
 
     public function logout() {
