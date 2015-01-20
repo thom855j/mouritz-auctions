@@ -154,6 +154,8 @@ MODULES
 /* line 3, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 .login-wrap {
   text-align: center; }
+  .login-wrap ul {
+    list-style-type: none; }
 
 /* line 9, C:/xampp/htdocs/projects/mouritz-com/public/scss/modules/_login.scss */
 input[type="text"], input[type="password"], .btn-log {
