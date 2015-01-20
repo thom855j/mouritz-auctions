@@ -17,14 +17,13 @@
     </head>
     <body>
         <!-- header -->
-        <div class="page-wrapper">
+        
 
 
-
+            <div class="nav-wrapper">
             <div class="grid grid-pad">
                 <div class="col-1-1">
                     <div class="content">
-                        <div class="nav-wrapper">
                             <nav id="mainNav" class="mainNav">
                                 <ul class="nav">
                                     <?php
@@ -56,9 +55,10 @@
                     </div>
                 </div>
             </div>
+            
+<div class="page-wrapper">
 
 
 
 
-
-        </div>
+</div>

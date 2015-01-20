@@ -20,5 +20,6 @@
 <script src="<?php echo URL; ?>public/js/jquery-scrolltofixed.js"></script>
 <!-- our JavaScript -->
 <script src="<?php echo URL; ?>js/application.js"></script>
+<script src="<?php echo URL; ?>js/javascript.js"></script>
 </body>
 </html>

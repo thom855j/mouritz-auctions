@@ -1,12 +1,16 @@
-@charset "utf-8";
-@import "partials/_typography.scss";
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic,300italic,300|Slabo+27px");
+@import "base/_typography.scss";
+@import "base/_variables.scss";
+
+/*
+
+MODULES
 
 
-$open-sans: 'Open Sans', sans-serif;
-$slabo: 'Slabo 27px', serif;
+ */
+@import "modules/_header.scss";
+@import "modules/_login.scss";
 
-$baseColor: #ae2828;
+
 
 * {
 	transition: all ease-in 0.2s;
@@ -15,6 +19,9 @@ $baseColor: #ae2828;
 
 body {
 	font-family: $open-sans;
+
+
+	height: 6000px;
 
 }
 
@@ -29,57 +36,3 @@ a {
 
 }
 
-.nav-wrapper {
-	margin: {
-		top: 80px;
-
-	}
-
-}
-
-.mainNav {
-	max-width: 100%;
-	background: {
-		color: rgba(000, 000, 000, .5);
-
-	}
-
-}
-
-.nav {
-	list-style: none;
-
-}
-
-.nav .navItem {
-	float: left;
-	margin: {
-		left: 2em;
-
-	}
-	border-bottom: 1px solid transparent;
-
-	&:hover {
-		border-bottom: 1px solid $baseColor;
-
-	}
-
-	a {
-		color: #000;
-		padding: {
-			bottom: 2px;
-
-			}
-
-	}
-
-
-}
-
-.nav .navItem:first-child {
-	margin: {
-		left: 0;
-
-	}
-
-}
