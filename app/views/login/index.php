@@ -16,7 +16,7 @@
         <input type="text" name="username"  class="form-control" placeholder="Brugernavn" required="" autofocus="">
         <input type="password" name="password"  class="form-control" placeholder="Adgangskode" required="">
         <label class="checkbox">
-            <input type="checkbox" name='remember' id="remember"> Remember my login on this PC
+            <input type="checkbox" name='remember' id="remember"> Remember login
         </label>
         <input class=" btn-lg btn-primary btn-block" type="submit" name="submit" value="Login"><br>
         <a href="<?php echo URL; ?>register">Registrer</a><br>
