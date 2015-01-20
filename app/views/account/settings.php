@@ -17,6 +17,9 @@
         <div class="content">
             <h4 class="heading">Settings</h4>
             <ul class="noLi">
+            <?php if ($user->role("Admin")) {?>
+                    <li><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
+                <?php } ?>
                 <li><a href="<?php echo URL; ?>account/settings">Settings</a></li>
                 <li><a href="<?php echo URL; ?>account/change" >Change Password</a></li>
             </ul>
