@@ -23,3 +23,5 @@ define('COOKIE_EXPIRY', 604800);
 define('SESSION_NAME', 'User');
 define('TOKEN_NAME', 'Token');
 
+//Randoms
+define('RANDOM_NAME', md5(mt_srand() . microtime()));
