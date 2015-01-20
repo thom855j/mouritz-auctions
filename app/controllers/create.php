@@ -36,7 +36,7 @@ class Create {
                     (Input::get('file', 'size') < MAX_UPLOAD_SIZE) && in_array($extension, $allowedExts)) {
                 if (Input::get('file', 'error') > 0) {
                     Session::flash('feedback', '<p style="color: red;">Return Code: ' . Input::get('file', 'error') . '</p>');
-                    Redirect::to(URL . 'account/auction');
+                    Redirect::to(URL . 'account/auctions');
                 } else {
 
                     $ext = str_replace('image/', '.', Input::get('file', 'type'));
@@ -45,14 +45,14 @@ class Create {
                     if (file_exists(UPLOADS_FOLDER . $file)) {
                         $uploaderror = $file . " already exists. ";
                         Session::flash('feedback', '<p style="color: red;">' . $uploaderror . '</p>');
-                        Redirect::to(URL . 'account/auction');
+                        Redirect::to(URL . 'account/create/auction');
                     } else {
                         copy(Input::escape(Input::get('file', 'tmp_name')), UPLOADS_FOLDER . $file);
                     }
                 }
             } else {
                 Session::flash('feedback', '<p style="color: red;">Invalid file!</p>');
-                Redirect::to(URL . 'account/auction');
+                Redirect::to(URL . 'account/create/auction');
             }
 
             $end_date = Input::escape(Input::get('date')) . ' ' . Input::escape(Input::get('time'));
@@ -71,7 +71,7 @@ class Create {
             ));
 
             Session::flash('feedback', '<p style="color: green;">Auction created successfully!</p>');
-            Redirect::to(ACCOUNT . 'my-auctions');
+            Redirect::to(ACCOUNT . 'account/auctions');
         }
         Redirect::to(URL . 'error/404');
     }

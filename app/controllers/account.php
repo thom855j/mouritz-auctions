@@ -36,6 +36,13 @@ class Account extends Controller {
         $this->view('account/create/' . $params);
     }
 
+    public function auctions() {
+        $feedback[] = Session::flash('feedback');
+        $this->view('account/auctions', (object) array(
+                    'feedback' => (object) $feedback
+        ));
+    }
+
     public function profile() {
         $user = $this->loadModel('UserModel');
         if ($user->isLoggedIn()) {
@@ -54,7 +61,6 @@ class Account extends Controller {
     public function settings() {
         $user = $this->loadModel('UserModel');
         if ($user->isLoggedIn()) {
-            Redirect::to(URL . 'account/login');
             $feedback = Session::flash('feedback');
             $this->view('account/settings', (object) array(
                         'user' => (object) $user,

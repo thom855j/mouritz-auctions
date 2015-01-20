@@ -1,6 +1,5 @@
 
 <section class="container">
-    <div class="register">
         <h1>Contact</h1>
         <?php
         if (!empty($data->errors)) {
@@ -43,5 +42,4 @@
 
             <p class="submit"><input type="submit" value="Send"></p>
         </form>
-    </div>
 </section>
