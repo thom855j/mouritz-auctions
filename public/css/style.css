@@ -188,23 +188,25 @@ input[type="text"], input[type="password"] {
 /* line 21, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 body {
   font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   height: 6000px; }
 
-/* line 29, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 31, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 a {
   color: #000; }
 
-/* line 34, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 36, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .page-wrapper, .container {
   max-width: 1100px;
   margin: 0 auto; }
 
-/* line 40, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 42, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 th {
   font-family: 'Slabo 27px', serif;
   font-weight: 600; }
 
-/* line 48, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 50, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 pre {
   width: 500px;
   margin: 50px auto;
@@ -218,7 +220,12 @@ pre {
   border: 1px solid #d3d3d3;
   border-radius: 5px; }
 
-/* line 67, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+/* line 69, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 .heading {
   font-family: 'Slabo 27px', serif;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  letter-spacing: 1px; }
+
+/* line 79, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.noLi {
+  list-style-type: none; }
