@@ -15,33 +15,36 @@
     </head>
     <body>
         <!-- header -->
-        <div class="container">
-            <div class="navigation">
-                <ul>
-                    <?php
-                    $user = $this->loadModel('UserModel');
-                    if (!$user->isLoggedIn()) {
-                        ?>
-                        <li><a href="<?php echo URL; ?>home">Home</a></li>
-                        <li><a href="<?php echo URL; ?>about">About</a></li>
-                        <li><a href="<?php echo URL; ?>account">Account</a></li>
-                        <li><a href="<?php echo URL; ?>login">Login</a></li>
-                        <li><a href="<?php echo URL; ?>register">Register</a></li>
-                        <li><a href="<?php echo URL; ?>account/logout">Log out</a></li>
-                    <?php } ?>
-                    <?php
-                    $user = $this->loadModel('UserModel');
-                    if ($user->isLoggedIn()) {
-                        ?>
-                        <li><a href="<?php echo URL; ?>home">Home</a></li>
-                        <li><a href="<?php echo URL; ?>about">About</a></li>
-                        <li><a href="<?php echo URL; ?>account">Account</a></li>
-                        <li><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
-                        <li><a href="<?php echo URL; ?>account/profile">Profile</a></li>
-                        <li><a href="<?php echo URL; ?>account/settings">Settings</a></li>
-                        <li><a href="<?php echo URL; ?>account/logout">Log out</a></li>
-                    <?php } ?>
-                </ul>
+        <div class="page-wrapper">
+
+            <div class="nav-wrapper">
+                <nav class="mainNav">
+                    <ul class="nav">
+                        <?php
+                        $user = $this->loadModel('UserModel');
+                        if (!$user->isLoggedIn()) {
+                            ?>
+                            <li class="navItem"><a href="<?php echo URL; ?>home">Home</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>about">About</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account">Account</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>login">Login</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>register">Register</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account/logout">Log out</a></li>
+                        <?php } ?>
+                        <?php
+                        $user = $this->loadModel('UserModel');
+                        if ($user->isLoggedIn()) {
+                            ?>
+                            <li class="navItem"><a href="<?php echo URL; ?>home">Home</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>about">About</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account">Account</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account/profile">Profile</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account/settings">Settings</a></li>
+                            <li class="navItem"><a href="<?php echo URL; ?>account/logout">Log out</a></li>
+                        <?php } ?>
+                    </ul>
+                </nav>
             </div>
 
         </div>
