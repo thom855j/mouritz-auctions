@@ -4,6 +4,17 @@
 
 	text-align: center;
 
-	background: #F0EAE8;
+}
+
+input[type="text"], [type="password"] {
+
+	border:none;
+
+	border-radius: 5px;
+
+	padding: 5px;
+
+	background: #f0eae8;
+	outline: none;
 
 }

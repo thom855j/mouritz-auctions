@@ -1,13 +1,14 @@
 
 <div class="page-wrapper" >
-    <?php
+
+    <div class="login-wrap">
+     <?php
     if (!empty($data->feedback)) {
         foreach ($data->feedback as $feedback) {
             echo $feedback;
         }
     }
     ?>
-    <div class="login-wrap">
     <div class="unit big-heading">
         <h2>Login</h2>
     </div>
