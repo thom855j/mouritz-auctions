@@ -143,8 +143,6 @@ input[type="text"], input[type="password"] {
   background: #f0eae8; }
 
 .btn-log {
-  padding-top: 6px;
-  padding-bottom: 6px;
   background: #ae2828;
   color: white; }
   .btn-log:hover {
