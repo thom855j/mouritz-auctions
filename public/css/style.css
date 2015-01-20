@@ -114,6 +114,21 @@ blockquote {
 
 /* line 16, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #ae2828;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  font-family: 'Open Sans', sans-serif; }
+
+/* line 21, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.nav-wrapper {
+  margin-top: 80px; }
+
+/* line 29, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.nav {
+  list-style: none; }
+
+/* line 34, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.nav .navItem {
+  float: left;
+  margin-left: 2%; }
+
+/* line 43, C:/xampp/htdocs/projects/mouritz-com/public/scss/style.scss */
+.nav .navItem:first-child {
+  margin-left: 0; }

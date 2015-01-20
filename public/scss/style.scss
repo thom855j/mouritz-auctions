@@ -15,7 +15,35 @@ $baseColor: #ae2828;
 
 body {
 	font-family: $open-sans;
-	color: $baseColor;
-	text-shadow: 1px 1px 1px rgba(000, 000, 000, .2);
+
+}
+
+.nav-wrapper {
+	margin: {
+		top: 80px;
+
+	}
+
+}
+
+.nav {
+	list-style: none;
+
+}
+
+.nav .navItem {
+	float: left;
+	margin: {
+		left: 2%;
+
+	}
+
+}
+
+.nav .navItem:first-child {
+	margin: {
+		left: 0;
+
+	}
 
 }

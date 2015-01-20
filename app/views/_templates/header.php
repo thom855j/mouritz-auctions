@@ -17,7 +17,7 @@
         <!-- header -->
         <div class="page-wrapper">
 
-            <div class="nav-wrapper">
+            <div id="nav-wrapper" class="nav-wrapper">
                 <nav class="mainNav">
                     <ul class="nav">
                         <?php
