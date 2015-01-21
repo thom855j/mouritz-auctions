@@ -24,8 +24,14 @@ class AuctionModel {
         return $this->_db->results();
     }
 
-    public function getAuctionsToUser($ID) {
+    public function getUserAuctions($ID) {
         $this->_db->get(array('*'), VIEWS_AUCTIONS, array(AUCTION_USER_ID, '=', $ID));
+        return $this->_db->results();
+    }
+
+    public function getAuctionsToUser($ID, $user_id) {
+        $sql = "SELECT * FROM Auctions_view WHERE id = $ID AND user_id = $user_id";
+        $this->_db->query($sql);
         return $this->_db->results();
     }
 

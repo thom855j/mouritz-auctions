@@ -1,58 +1,52 @@
-<div class="container">
     <?php
-    $Username = USER_USERNAME;
-    $Firstname = USER_FIRSTNAME;
-    $Lastname = USER_LASTNAME;
-    $Email = USER_EMAIL;
-
-    if (!empty($data->errors)) {
-        foreach ($data->errors as $error) {
-            echo $error;
+    if (!empty($data->feedback)) {
+        foreach ($data->feedback as $feedback) {
+            echo $feedback;
         }
     }
     ?>
+        <h2 class="heading">Profile</h2>
+        <form action="<?php echo URL ?>update/profile" method="POST">
 
-    <div class="grid grid-pad">
-    <div class="col-3-12">
-        <div class="content">
-            <h4 class="heading">Settings</h4>
-            <ul class="noLi">
-            <?php if ($user->role("Admin")) {?>
-                    <li><a href="<?php echo URL; ?>controlpanel">Controlpanel</a></li>
-                <?php } ?>
-                <li><a href="<?php echo URL; ?>account/settings">Settings</a></li>
-                <li><a href="<?php echo URL; ?>account/change" >Change Password</a></li>
-            </ul>
-        </div>
-    </div>
+            <label for="Firstname">Firstname</label>
+            <input type="text" 
+                   name="firstname" 
+                   id="Firstname" 
+                   value="<?php echo Input::escape($data->user->data()->$Firstname); ?>" />
+            <br><br>
+            <label for="Lastname">Lastname</label>
+            <input type="text" 
+                   name="lastname" 
+                   id="Lastname" 
+                   value="<?php echo Input::escape($data->user->data()->$Lastname); ?>" />
+            <br><br>
+            <label for="Email">Email</label>
+            <input type="text" 
+                   name="email" 
+                   id="Email" 
+                   value="<?php echo Input::escape($data->user->data()->$Email); ?>" />
+            <br><br>
 
-    <div class="col-9-12">
-        <div class="content">
-                <form action="<?php echo URL ?>update/profile" method="POST">
+            <input class="btn btn-success" type="submit" value="Update" />
+        </form>
+        <br><br>
+        <h2 class="heading">Password</h2>
+        <form action="<?php echo URL ?>update/password" method="post">
+            <label for="password">Current password</label>
+            <input type="password" 
+                   name="old" 
+                   id="password" />
+            <br><br>
+            <label for="password">New password</label>
+            <input type="password" 
+                   name="new" 
+                   id="password" />
+            <br><br>
+            <label for="check">New password again</label>
+            <input type="password" 
+                   name="check" 
+                   id="check" />
+            <br><br>
+            <input type="submit" value="Update" />
+        </form>
 
-        <label for="Firstname">Firstname</label>
-        <input type="text" 
-               name="firstname" 
-               id="Firstname" 
-               value="<?php echo Input::escape($data->user->data()->$Firstname); ?>" />
-
-        <label for="Lastname">Lastname</label>
-        <input type="text" 
-               name="lastname" 
-               id="Lastname" 
-               value="<?php echo Input::escape($data->user->data()->$Lastname); ?>" />
-
-        <label for="Email">Email</label>
-        <input type="email" 
-               name="email" 
-               id="Email" 
-               value="<?php echo Input::escape($data->user->data()->$Email); ?>" />
-
-
-        <input type="submit" value="Update" />
-    </form>
-        </div>
-    </div>
-</div>
-
-</div>

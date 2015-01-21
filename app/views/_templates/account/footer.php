@@ -1,7 +1,7 @@
-<div class="container">
-
 </div>
-
+</div>
+</div>
+</div> <!-- /container -->
 <!--<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='js/ajax.js'></script>
 <script src='js/valid.js'></script> -->
@@ -19,6 +19,7 @@
 <script src="<?php echo URL; ?>public/js/bootstrap.min.js"></script>
 <script src="<?php echo URL; ?>public/js/jquery-scrolltofixed.js"></script>
 <!-- our JavaScript -->
+<script src="//cdn.ckeditor.com/4.4.6/basic/ckeditor.js"></script>
 <script src="<?php echo URL; ?>js/app.js"></script>
 </body>
 </html>
