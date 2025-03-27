@@ -1,5 +1,5 @@
-# Mouritz Auktioner lol
-Mouritz.com Praktisk Web opgave fra SDE
+# Mouritz Auktioner
+Praktisk Web opgave fra SDE
 
 <br>
 ###Niveau
